@@ -21,7 +21,7 @@ function createPaste (content, options, gotOptions) {
     }
   });
 
-  return got(postUrl, resolvedGotOptions).then(function (result) {
+  return got.post(postUrl, resolvedGotOptions).then(function (result) {
     if (!result.body || !result.body.key) {
       throw new Error('Did not receive hastebin key.');
     }
