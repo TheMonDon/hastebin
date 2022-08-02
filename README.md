@@ -5,11 +5,11 @@ CLI tool that uploads text to hastebin. (Basically a Node.js version of [haste-c
 ## Installation
 
 To install this package globally using NPM, run:
-`npm install -g hastebin`
+`npm install -g TheMonDon/hastebin`
 
-To try this package out before you install, try `npx hastebin`.
+To try this package out before you install, try `npx TheMonDon/hastebin`.
 
-To install this package locally, try `npm i hastebin`. You can then access the `hastebin` client via NPM scripts.
+To install this package locally, try `npm i TheMonDon/hastebin`. You can then access the `hastebin` client via NPM scripts.
 
 ## Usage
 
