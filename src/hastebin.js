@@ -25,14 +25,14 @@ async function createPaste (content, options, gotOptions) {
   let result = await got.post(postUrl, resolvedGotOptions);
   result = Object.values(JSON.parse(result.body))[0];
 
-  if (!result.body || !result.body.key) {
+  if (!result) {
     throw new Error('Did not receive hastebin key.');
   }
 
   if ((options ? options.raw : null)) {
-    return new URL('/raw/' + result.body.key, hasteServer);
+    return new URL('/raw/' + result, hasteServer);
   } else {
-    return new URL(result.body.key, hasteServer);
+    return new URL(result, hasteServer);
   }
 }
 
