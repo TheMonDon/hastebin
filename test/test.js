@@ -1,14 +1,14 @@
-var assert = require('assert')
-var getStdin = require('get-stdin')
-var got = require('got')
-var jsapi = require('../src/hastebin')
+const assert = require('assert')
+const getStdin = require('get-stdin')
+const got = require('got')
+const jsapi = require('../src/hastebin')
 
-var testData = 'test'
+const testData = 'test'
 
 function assertHastebinUrlMatchesTestData (input) {
-  var hastebinUrl = input.trim()
+  const hastebinUrl = input.trim()
   assert(hastebinUrl.match(/^https:\/\/hastebin.com\/.*/) != null, 'output must be a hastebin url')
-  var key = hastebinUrl.split('/').slice(-1)[0]
+  const key = hastebinUrl.split('/').slice(-1)[0]
   return got('https://hastebin.com/raw/' + key)
 
     .then(function (result) {

@@ -1,20 +1,20 @@
 {
   "name": "hastebin",
   "main": "src/hastebin.js",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "CLI tool that uploads text to hastebin",
-  "author": "Rahat Ahmed",
+  "author": "Rahat Ahmed & TheMonDon",
   "typings": "./index.d.ts",
-  "readme": "https://github.com/rahatarmanahmed/hastebin#readme",
+  "readme": "https://github.com/TheMonDon/hastebin#readme",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rahatarmanahmed/hastebin/"
+    "url": "https://github.com/TheMonDon/hastebin/"
   },
   "bugs": {
-    "url": "https://github.com/rahatarmanahmed/hastebin/issues"
+    "url": "https://github.com/TheMonDon/hastebin/issues"
   },
-  "homepage": "https://github.com/rahatarmanahmed/hastebin/",
+  "homepage": "https://github.com/TheMonDon/hastebin/",
   "contributors": [
     {
       "name": "Will Hoskings (resynth1943)",
@@ -33,13 +33,12 @@
   "devDependencies": {
     "@types/got": "^9.6.7",
     "get-stdin": "^9.0.0",
-    "standard": "^17.0.0"
-  },
-  "scripts": {
-    "lint": "standard",
-    "test": "npm run lint && echo 'test' | node src/cli.js | node test/test.js",
-    "prepublish": "npm test",
-    "fix": "standard --fix"
+    "standard": "^17.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
   },
   "engines": {
     "node": ">=4"
