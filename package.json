@@ -1,7 +1,7 @@
 {
   "name": "hastebin",
   "main": "src/hastebin.js",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "CLI tool that uploads text to hastebin",
   "author": "Rahat Ahmed & TheMonDon",
   "typings": "./index.d.ts",

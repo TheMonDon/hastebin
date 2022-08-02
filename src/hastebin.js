@@ -14,9 +14,7 @@ async function createPaste (content, options, gotOptions) {
   const postUrl = new URL('/documents', hasteServer);
 
   const resolvedGotOptions = Object.assign({
-    json: {
-      body: content
-    },
+    body: content,
     headers: {
       'Content-Type': (options ? options.contentType : null) || 'text/plain'
     }
@@ -30,9 +28,9 @@ async function createPaste (content, options, gotOptions) {
   }
 
   if ((options ? options.raw : null)) {
-    return new URL('/raw/' + result, hasteServer);
+    return new URL('/raw/' + result, hasteServer).toString();
   } else {
-    return new URL(result, hasteServer);
+    return new URL(result, hasteServer).toString();
   }
 }
 
