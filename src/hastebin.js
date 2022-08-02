@@ -15,7 +15,6 @@ function createPaste (content, options, gotOptions) {
 
   const resolvedGotOptions = Object.assign({
     body: content,
-    json: true,
     headers: {
       'Content-Type': (options ? options.contentType : null) || 'text/plain'
     }
