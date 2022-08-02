@@ -11,7 +11,7 @@ function createPaste (content, options, gotOptions) {
   }
 
   const hasteServer = (options ? options.server : null) || 'https://hastebin.com';
-  const postUrl = new URL(hasteServer, 'documents');
+  const postUrl = new URL('/documents', hasteServer);
 
   const resolvedGotOptions = Object.assign({
     body: content,
@@ -27,9 +27,9 @@ function createPaste (content, options, gotOptions) {
     }
 
     if ((options ? options.raw : null)) {
-      return new URL(hasteServer, 'raw/' + result.body.key);
+      return new URL('raw/' + result.body.key, hasteServer);
     } else {
-      return new URL(hasteServer, result.body.key);
+      return new URL(result.body.key, hasteServer);
     }
   });
 }
