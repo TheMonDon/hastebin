@@ -1,4 +1,4 @@
-const { got } = require('got');
+const got = require('got');
 
 function createPaste (content, options, gotOptions) {
   gotOptions = gotOptions || {};
